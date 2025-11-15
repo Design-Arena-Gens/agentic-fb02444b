@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 12 12 12;
+  --fg: 248 250 252;
+  --muted: 148 163 184;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: radial-gradient(60rem 40rem at 20% -10%, rgba(59,130,246,0.25), transparent 60%),
+              radial-gradient(50rem 30rem at 80% -20%, rgba(168,85,247,0.25), transparent 60%),
+              #000;
+}
+
+/* Glass card */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Container */
+.container-app { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
